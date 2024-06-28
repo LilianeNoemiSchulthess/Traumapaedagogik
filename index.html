@@ -21,14 +21,13 @@
         }
         .buttons {
             display: flex;
-            flex-direction: column;
             gap: 20px;
-            align-items: center;
         }
         .buttons button {
             background-color: var(--theme-palette-color-2);
             color: white;
-            padding: 20px 40px;
+            width: 200px;
+            height: 200px;
             text-decoration: none;
             border: none;
             border-radius: 10px;
@@ -37,6 +36,9 @@
             transition: background-color 0.3s, color 0.3s;
             cursor: pointer;
             font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .buttons button:hover {
             background-color: var(--theme-palette-color-8);

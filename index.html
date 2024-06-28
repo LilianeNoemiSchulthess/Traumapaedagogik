@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Theoretische Vertiefung</title>
+    <title>TRUMA-PÄDAGOGIE</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -31,6 +31,7 @@
             width: 80%;
             max-width: 800px;
             margin: 20px;
+            text-align: center;
         }
         h1 {
             margin-bottom: 10px;
@@ -41,35 +42,46 @@
             font-size: 1.5em;
             color: #2e8b57;
         }
-        ul {
-            list-style: none;
-            padding: 0;
+        .author-photo {
+            margin-bottom: 20px;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
         }
-        li {
-            margin: 10px 0;
+        .buttons {
+            display: flex;
+            justify-content: space-around;
         }
-        a {
+        .buttons a {
+            display: inline-block;
+            background-color: #2e8b57;
+            color: white;
+            padding: 10px 20px;
             text-decoration: none;
-            color: #2e8b57;
+            border-radius: 5px;
+            width: 30%;
+            text-align: center;
             font-weight: bold;
         }
-        a:hover {
-            text-decoration: underline;
+        .buttons a:hover {
+            background-color: #276b4a;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Theoretische Vertiefung</h1>
+        <h1>TRUMA-PÄDAGOGIE</h1>
     </header>
     <main>
+        <img src="image.png" alt="Liliane Schulthess" class="author-photo">
         <h2>Autor: LILIANE SCHULTHESS</h2>
         <p>Aqui estão alguns documentos em PDF para estudo aprofundado:</p>
-        <ul>
-            <li><a href="https://github.com/LilianeNoemiSchulthess/Traumapaedagogik/raw/main/Theoretische%20Vertiefung/Bindungstheorie.pdf" target="_blank">Bindungstheorie</a></li>
-            <li><a href="https://github.com/LilianeNoemiSchulthess/Traumapaedagogik/raw/main/Theoretische%20Vertiefung/Trauma.pdf" target="_blank">Trauma</a></li>
-            <li><a href="https://github.com/LilianeNoemiSchulthess/Traumapaedagogik/raw/main/Theoretische%20Vertiefung/Traumapa%CC%88dagogik.pdf" target="_blank">Traumapädagogik</a></li>
-        </ul>
+        <div class="buttons">
+            <a href="https://github.com/LilianeNoemiSchulthess/Traumapaedagogik/raw/main/Theoretische%20Vertiefung/Bindungstheorie.pdf" target="_blank">Bindungstheorie</a>
+            <a href="https://github.com/LilianeNoemiSchulthess/Traumapaedagogik/raw/main/Theoretische%20Vertiefung/Trauma.pdf" target="_blank">Trauma</a>
+            <a href="https://github.com/LilianeNoemiSchulthess/Traumapaedagogik/raw/main/Theoretische%20Vertiefung/Traumapa%CC%88dagogik.pdf" target="_blank">Traumapädagogik</a>
+        </div>
     </main>
 </body>
 </html>

@@ -25,6 +25,9 @@
         }
         header img {
             height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            object-fit: cover;
         }
         nav {
             display: flex;
@@ -48,7 +51,7 @@
             position: relative;
         }
         .hero h1 {
-            font-size: 3em;
+            font-size: 2em;
             margin: 0;
         }
         .container {
@@ -107,7 +110,6 @@
             background-color: var(--theme-palette-color-2);
             color: white;
         }
-
         .unclickable {
             color: white;
             text-decoration: none;
@@ -118,9 +120,12 @@
 </head>
 <body>
     <header>
-        <img src="https://github.com/LilianeNoemiSchulthess/Traumapaedagogik/blob/main/Perfil" alt="Liliane Schulthess">
         <span class="unclickable">lil.schulthess@bluewin.ch</span>
+        <img src="https://github.com/LilianeNoemiSchulthess/Traumapaedagogik/blob/main/Perfil" alt="Liliane Schulthess">
     </header>
+    <div class="hero">
+        <h1>Beziehungsgestaltung als Grundlage für sichere Orte in der Traumapädagogik</h1>
+    </div>
     <div class="container">
         <div class="buttons">
             <button onclick="toggleFileLinks('experteninterviewsLinks')">
@@ -142,11 +147,6 @@
                 Schlussfolgerungen
             </button>
         </div>
-    </div>
-    <div class="hero">
-        <h1>Beziehungsgestaltung als Grundlage für sichere Orte in der Traumapädagogik</h1>
-    </div>
-    <div class="container">
         <div class="file-links" id="experteninterviewsLinks">
             <a href="https://github.com/LilianeNoemiSchulthess/Traumapaedagogik/blob/main/Vertiefender%20Einblick%20Handreichung/Experteninterviews/Experteninterview%20mit%20Daniel%20Mauerhofer.pdf" target="_blank">Experteninterview mit Daniel Mauerhofer</a>
             <a href="https://github.com/LilianeNoemiSchulthess/Traumapaedagogik/blob/main/Vertiefender%20Einblick%20Handreichung/Experteninterviews/Experteninterview%20mit%20Schulpsychologin.pdf" target="_blank">Experteninterview mit Schulpsychologin</a>

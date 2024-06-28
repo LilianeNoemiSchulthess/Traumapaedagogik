@@ -23,24 +23,33 @@
             align-items: center;
             padding: 10px 20px;
         }
-        header img {
+        .profile {
+            text-align: center;
+        }
+        .profile img {
             height: 50px;
             width: 50px;
             border-radius: 50%;
             object-fit: cover;
+            cursor: pointer;
         }
-        nav {
-            display: flex;
-            gap: 20px;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
+        .profile-name {
+            font-size: 14px;
             font-weight: bold;
-            transition: color 0.3s;
         }
-        nav a:hover {
-            color: #005bb5;
+        .profile-info {
+            display: none;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            position: absolute;
+            right: 20px;
+            top: 70px;
+            width: 200px;
+        }
+        .profile-info p {
+            margin: 0;
         }
         .hero {
             background-color: var(--theme-palette-color-2);
@@ -121,7 +130,15 @@
 <body>
     <header>
         <span class="unclickable">lil.schulthess@bluewin.ch</span>
-        <img src="https://github.com/LilianeNoemiSchulthess/Traumapaedagogik/blob/main/Perfil" alt="Liliane Schulthess">
+        <div class="profile">
+            <img src="https://github.com/LilianeNoemiSchulthess/Traumapaedagogik/blob/main/Perfil" alt="Liliane Schulthess" onclick="toggleProfileInfo()">
+            <div class="profile-name">LILIANE SCHULTHESS</div>
+            <div class="profile-info" id="profileInfo">
+                <p>Liliane Schulthess</p>
+                <p>Especialista em Traumapädagogik</p>
+                <p>Email: lil.schulthess@bluewin.ch</p>
+            </div>
+        </div>
     </header>
     <div class="hero">
         <h1>Beziehungsgestaltung als Grundlage für sichere Orte in der Traumapädagogik</h1>
@@ -155,7 +172,7 @@
         <div class="file-links" id="theoretischeVertiefungLinks">
             <a href="https://github.com/LilianeNoemiSchulthess/Traumapaedagogik/raw/main/Vertiefender%20Einblick%20Handreichung/Theoretische%20Vertiefung/Bindungstheorie.pdf" target="_blank">Bindungstheorie.pdf</a>
             <a href="https://github.com/LilianeNoemiSchulthess/Traumapaedagogik/raw/main/Vertiefender%20Einblick%20Handreichung/Theoretische%20Vertiefung/Trauma.pdf" target="_blank">Trauma</a>
-            <a href="https://github.com/LilianeNoemiSchulthess/Traumapaedagogik/blob/main/Vertiefender%20Einblick%20Handreichung/Theoretische%20Vertiefung/Traumapa%CC%88dagogik.pdf" target="_blank">Traumapädagogik</a>
+            <a href="Vertiefender Einblick Handreichung/Theoretische Vertiefung/Traumapädagogik.pdf" target="_blank">Traumapädagogik</a>
         </div>
         <div class="file-links" id="schlussfolgerungenLinks">
             <a href="https://github.com/LilianeNoemiSchulthess/Traumapaedagogik/raw/main/Vertiefender%20Einblick%20Handreichung/Darstellung%20der%20Ergebnisse.pdf" target="_blank">Darstellung der Ergebnisse</a>
@@ -174,6 +191,15 @@
                 target.style.display = 'flex';
             } else {
                 target.style.display = 'none';
+            }
+        }
+
+        function toggleProfileInfo() {
+            var profileInfo = document.getElementById('profileInfo');
+            if (profileInfo.style.display === 'none' || profileInfo.style.display === '') {
+                profileInfo.style.display = 'block';
+            } else {
+                profileInfo.style.display = 'none';
             }
         }
     </script>

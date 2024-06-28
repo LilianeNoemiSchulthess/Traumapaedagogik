@@ -7,113 +7,109 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #ccffcc; /* Verde claro */
+            background-color: #f0f0f0;
             color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            min-height: 100vh;
             margin: 0;
         }
         header {
-            background-color: #2e8b57; /* Verde mais escuro */
+            background-color: #0073e6;
             color: white;
-            padding: 15px;
-            text-align: center;
-            width: 100%;
-        }
-        main {
-            background: white;
             padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            width: 80%;
-            max-width: 800px;
-            margin: 20px;
             text-align: center;
-        }
-        h1 {
-            margin-bottom: 10px;
-            font-size: 2em;
-        }
-        h2 {
-            margin-top: 0;
-            font-size: 1.5em;
-            color: #2e8b57;
-        }
-        .profile-container {
             display: flex;
             align-items: center;
-            background-color: #0073e6; /* Azul do exemplo */
-            padding: 10px 20px;
-            border-radius: 30px;
-            color: white;
+            justify-content: space-between;
+        }
+        header img {
+            height: 50px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .profile {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
         }
-        .author-photo {
+        .profile img {
             border-radius: 50%;
-            width: 50px;
-            height: 50px;
+            width: 150px;
+            height: 150px;
             object-fit: cover;
-            cursor: pointer;
-            margin-right: 15px;
+            margin-right: 20px;
         }
-        .author-email {
-            font-size: 1.2em;
+        .profile div {
+            flex: 1;
+        }
+        .profile h2 {
+            margin: 0;
+            font-size: 1.5em;
+            color: #0073e6;
         }
         .buttons {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             margin-bottom: 20px;
         }
         .buttons a {
             display: inline-block;
-            background-color: #2e8b57;
+            background-color: #0073e6;
             color: white;
             padding: 10px 20px;
             text-decoration: none;
             border-radius: 5px;
-            width: 30%;
             text-align: center;
             font-weight: bold;
+            flex: 1;
+            margin: 0 10px;
         }
         .buttons a:hover {
-            background-color: #276b4a;
+            background-color: #005bb5;
         }
         .curiosities {
-            display: none;
-            background-color: #f9f9f9;
-            padding: 15px;
+            background-color: white;
+            padding: 20px;
             border-radius: 8px;
-            margin-top: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: left;
+            display: none;
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>TRUMA-PÄDAGOGIE</h1>
+        <img src="logo.png" alt="Logo">
+        <h1>LILIANE SCHULTHESS</h1>
     </header>
-    <main>
-        <div class="profile-container" onclick="toggleCuriosities()">
-            <img src="Perfil" alt="Liliane Schulthess" class="author-photo">
-            <span class="author-email">winne.oliveira@winphar.pt</span>
+    <div class="container">
+        <div class="profile">
+            <img src="Perfil" alt="Liliane Schulthess" onclick="toggleCuriosities()">
+            <div>
+                <h2>Autor: LILIANE SCHULTHESS</h2>
+                <p>Aqui estão alguns documentos em PDF para estudo aprofundado:</p>
+            </div>
         </div>
         <div class="buttons">
             <a href="https://github.com/LilianeNoemiSchulthess/Traumapaedagogik/raw/main/Theoretische%20Vertiefung/Bindungstheorie.pdf" target="_blank">Bindungstheorie</a>
             <a href="https://github.com/LilianeNoemiSchulthess/Traumapaedagogik/raw/main/Theoretische%20Vertiefung/Trauma.pdf" target="_blank">Trauma</a>
             <a href="https://github.com/LilianeNoemiSchulthess/Traumapaedagogik/raw/main/Theoretische%20Vertiefung/Traumapa%CC%88dagogik.pdf" target="_blank">Traumapädagogik</a>
         </div>
-        <h2>Autor: LILIANE SCHULTHESS</h2>
-        <p>Aqui estão alguns documentos em PDF para estudo aprofundado:</p>
         <div class="curiosities" id="curiosities">
             <h3>Curiosidades sobre a autora</h3>
             <p>A autora Liliane Schulthess é uma especialista em pedagogia de trauma, com vasta experiência em estudos teóricos e práticos...</p>
             <!-- Adicione mais curiosidades aqui -->
         </div>
-    </main>
+    </div>
     <script>
         function toggleCuriosities() {
             var curiosities = document.getElementById('curiosities');

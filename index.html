@@ -107,27 +107,34 @@
             bottom: 0;
             width: 100%;
         }
+        .unclickable {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: default;
+        }
     </style>
 </head>
 <body>
     <header>
         <img src="/mnt/data/image.png" alt="Liliane Schulthess">
-        <a href="lil.schulthess@bluewin.ch" style="color: white; text-decoration: none; font-weight: bold;">lil.schulthess@bluewin.ch</a>
+        <span class="unclickable">lil.schulthess@bluewin.ch</span>
     </header>
-    <div class="hero">
-        <h1>Beziehungsgestaltung als Grundlage für sichere Orte in der Traumapädagogik</h1>
-    </div>
     <div class="container">
         <div class="buttons">
             <button onclick="toggleFileLinks('experteninterviewsLinks')">Experteninterviews</button>
             <button onclick="toggleFileLinks('theoretischeVertiefungLinks')">Theoretische Vertiefung</button>
             <button onclick="toggleFileLinks('schlussfolgerungenLinks')">Schlussfolgerungen</button>
         </div>
+    </div>
+    <div class="hero">
+        <h1>Beziehungsgestaltung als Grundlage für sichere Orte in der Traumapädagogik</h1>
+    </div>
+    <div class="container">
         <div class="file-links" id="experteninterviewsLinks">
             <a href="https://github.com/LilianeNoemiSchulthess/Traumapaedagogik/blob/main/Vertiefender%20Einblick%20Handreichung/Experteninterviews/Experteninterview%20mit%20Daniel%20Mauerhofer.pdf" target="_blank">Experteninterview mit Daniel Mauerhofer</a>
-               <a href="https://github.com/LilianeNoemiSchulthess/Traumapaedagogik/blob/main/Vertiefender%20Einblick%20Handreichung/Experteninterviews/Experteninterview%20mit%20Schulpsychologin.pdf" target="_blank">Experteninterview mit Schulpsychologin</a>
+            <a href="https://github.com/LilianeNoemiSchulthess/Traumapaedagogik/blob/main/Vertiefender%20Einblick%20Handreichung/Experteninterviews/Experteninterview%20mit%20Schulpsychologin.pdf" target="_blank">Experteninterview mit Schulpsychologin</a>
             <a href="https://github.com/LilianeNoemiSchulthess/Traumapaedagogik/blob/main/Vertiefender%20Einblick%20Handreichung/Experteninterviews/Experteninterview%20mit%20Marianne%20Herzog.pdf" target="_blank">Experteninterview mit Marianne Herzog</a>
-         
         </div>
         <div class="file-links" id="theoretischeVertiefungLinks">
             <a href="https://github.com/LilianeNoemiSchulthess/Traumapaedagogik/blob/main/Vertiefender%20Einblick%20Handreichung/Theoretische%20Vertiefung/Bindungstheorie.pdf" target="_blank">Bindungstheorie.pdf</a>

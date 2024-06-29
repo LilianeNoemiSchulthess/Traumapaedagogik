@@ -7,20 +7,21 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
         :root {
-            --theme-palette-color-1: #d6c6b4; /* Hellbeige */
-            --theme-palette-color-2: #f5f0e6; /* Sehr helles Beige */
-            --theme-palette-color-3: #ffffff; /* Weiß */
-            --theme-palette-color-4: #333333; /* Dunkelgrau */
-            --theme-palette-color-5: #a58f76; /* Mittelbeige */
+            --theme-palette-color-1: #2a9d8f; /* Beruhigendes Blau */
+            --theme-palette-color-2: #a8dadc; /* Sanftes Grün */
+            --theme-palette-color-3: #f1faee; /* Helles Grau */
+            --theme-palette-color-4: #ffffff; /* Weiß */
+            --theme-palette-color-5: #333333; /* Dunkles Grau */
         }
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: var(--theme-palette-color-2);
+            background-color: var(--theme-palette-color-4);
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            color: var(--theme-palette-color-5);
         }
         header {
             background-color: var(--theme-palette-color-1);
@@ -49,12 +50,12 @@
             width: 80px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid var(--theme-palette-color-3);
+            border: 3px solid var(--theme-palette-color-4);
         }
         .profile-info {
             display: none;
             background-color: var(--theme-palette-color-3);
-            color: var(--theme-palette-color-4);
+            color: var(--theme-palette-color-5);
             padding: 15px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -76,8 +77,8 @@
             flex-wrap: wrap;
         }
         .buttons button {
-            background-color: var(--theme-palette-color-5);
-            color: var(--theme-palette-color-3);
+            background-color: var(--theme-palette-color-2);
+            color: var(--theme-palette-color-5);
             width: 180px;
             height: 180px;
             border: none;
@@ -94,7 +95,7 @@
         }
         .buttons button:hover {
             background-color: var(--theme-palette-color-3);
-            color: var(--theme-palette-color-5);
+            color: var(--theme-palette-color-2);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
         .file-links {
@@ -107,19 +108,19 @@
         }
         .file-links a {
             background-color: var(--theme-palette-color-3);
-            color: var(--theme-palette-color-4);
+            color: var(--theme-palette-color-5);
             padding: 12px 20px;
             border-radius: 5px;
             text-decoration: none;
-            border: 1px solid var(--theme-palette-color-5);
+            border: 1px solid var(--theme-palette-color-2);
             width: 90%;
             max-width: 500px;
             text-align: center;
             transition: background-color 0.3s, color 0.3s;
         }
         .file-links a:hover {
-            background-color: var(--theme-palette-color-5);
-            color: var(--theme-palette-color-3);
+            background-color: var(--theme-palette-color-2);
+            color: var(--theme-palette-color-4);
         }
         footer {
             background-color: var(--theme-palette-color-1);

@@ -12,10 +12,11 @@
             --theme-palette-color-3: #f1faee; /* Helles Grau */
             --theme-palette-color-4: #ffffff; /* Weiß */
             --theme-palette-color-5: #333333; /* Dunkles Grau */
+            --background-gradient: linear-gradient(to bottom right, #b1dfbb, #176578); /* Hintergrund-Verlauf */
         }
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: var(--theme-palette-color-4);
+            background: var(--background-gradient);
             margin: 0;
             padding: 0;
             display: flex;
@@ -63,9 +64,8 @@
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             position: absolute;
-            top: 120px;
-            left: 50%;
-            transform: translateX(-50%);
+            top: 0;
+            left: 110px;
             width: 250px;
             z-index: 1;
         }

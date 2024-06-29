@@ -6,11 +6,11 @@
     <title>Liliane Schulthess</title>
     <style>
         :root {
-            --theme-palette-color-1: #27867b;
-            --theme-palette-color-2: #e0f7f4;
-            --theme-palette-color-3: #ffffff;
-            --theme-palette-color-4: #333;
-            --theme-palette-color-5: #444;
+            --theme-palette-color-1: #d6c6b4; /* Bege claro */
+            --theme-palette-color-2: #f5f0e6; /* Bege mais claro */
+            --theme-palette-color-3: #ffffff; /* Branco */
+            --theme-palette-color-4: #333333; /* Preto suave */
+            --theme-palette-color-5: #555555; /* Cinza escuro */
         }
         body {
             font-family: Arial, sans-serif;
@@ -23,7 +23,7 @@
         }
         header {
             background-color: var(--theme-palette-color-1);
-            color: var(--theme-palette-color-3);
+            color: var(--theme-palette-color-4);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -64,24 +64,25 @@
         }
         .buttons button {
             background-color: var(--theme-palette-color-1);
-            color: var(--theme-palette-color-3);
+            color: var(--theme-palette-color-4);
             width: 200px;
             height: 200px;
             border: none;
-            border-radius: 10px;
+            border-radius: 15px;
             text-align: center;
             font-weight: bold;
-            transition: background-color 0.3s, color 0.3s;
+            transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
             cursor: pointer;
             font-size: 18px;
             display: flex;
             justify-content: center;
             align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .buttons button:hover {
             background-color: var(--theme-palette-color-3);
             color: var(--theme-palette-color-1);
-            border: 2px solid var(--theme-palette-color-1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
         .file-links {
             display: none;

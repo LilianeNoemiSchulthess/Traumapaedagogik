@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liliane Schulthess</title>
     <style>
         :root {
-            --theme-palette-color-2: #27867b;
-            --theme-palette-color-8: #ffffff;
-            --theme-palette-color-hover: #1e6d62;
-            --theme-palette-color-text: #333;
+            --theme-palette-color-1: #27867b;
+            --theme-palette-color-2: #e0f7f4;
+            --theme-palette-color-3: #ffffff;
+            --theme-palette-color-4: #333;
+            --theme-palette-color-5: #444;
         }
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            background-color: var(--theme-palette-color-2);
             margin: 0;
             padding: 0;
             display: flex;
@@ -21,16 +22,16 @@
             min-height: 100vh;
         }
         header {
-            background-color: #000;
-            color: white;
+            background-color: var(--theme-palette-color-1);
+            color: var(--theme-palette-color-3);
             display: flex;
-            justify-content: flex-end;
+            justify-content: space-between;
             align-items: center;
             padding: 10px 20px;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
         }
         .profile {
             position: relative;
@@ -44,8 +45,8 @@
         }
         .profile-info {
             display: none;
-            background-color: #fff;
-            color: #000;
+            background-color: var(--theme-palette-color-3);
+            color: var(--theme-palette-color-4);
             padding: 10px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -53,39 +54,34 @@
             right: 0;
             top: 60px;
             width: 200px;
-            z-index: 1001;
-        }
-        main {
-            padding: 80px 20px 20px;
-            flex: 1;
+            z-index: 1;
         }
         .buttons {
             display: flex;
             justify-content: center;
             gap: 20px;
             padding: 20px;
-            flex-wrap: wrap;
         }
         .buttons button {
-            background-color: var(--theme-palette-color-2);
-            color: white;
+            background-color: var(--theme-palette-color-1);
+            color: var(--theme-palette-color-3);
             width: 200px;
             height: 200px;
             border: none;
             border-radius: 10px;
             text-align: center;
             font-weight: bold;
-            transition: background-color 0.3s, transform 0.3s;
+            transition: background-color 0.3s, color 0.3s;
             cursor: pointer;
             font-size: 18px;
             display: flex;
             justify-content: center;
             align-items: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         .buttons button:hover {
-            background-color: var(--theme-palette-color-hover);
-            transform: translateY(-5px);
+            background-color: var(--theme-palette-color-3);
+            color: var(--theme-palette-color-1);
+            border: 2px solid var(--theme-palette-color-1);
         }
         .file-links {
             display: none;
@@ -95,74 +91,67 @@
             margin-top: 20px;
         }
         .file-links a {
-            background-color: #fff;
-            color: var(--theme-palette-color-text);
+            background-color: var(--theme-palette-color-3);
+            color: var(--theme-palette-color-4);
             padding: 10px;
             border-radius: 5px;
             text-decoration: none;
-            border: 1px solid var(--theme-palette-color-2);
+            border: 1px solid var(--theme-palette-color-1);
             width: 100%;
             text-align: center;
             transition: background-color 0.3s, color 0.3s;
         }
         .file-links a:hover {
-            background-color: var(--theme-palette-color-2);
-            color: white;
+            background-color: var(--theme-palette-color-1);
+            color: var(--theme-palette-color-3);
         }
         footer {
-            background-color: #000;
-            color: white;
+            background-color: var(--theme-palette-color-5);
+            color: var(--theme-palette-color-3);
             text-align: center;
             padding: 10px 0;
-            position: relative;
-            bottom: 0;
-            width: 100%;
+            margin-top: auto;
         }
     </style>
 </head>
 <body>
     <header>
+        <h1>Liliane Schulthess</h1>
         <div class="profile" onclick="toggleProfileInfo()">
             <img src="Perfil.jpeg" alt="Liliane Schulthess">
             <div class="profile-info" id="profileInfo">
-                <p>Especialista em Traumapädagogik</p>
+                <p>Expertin für Traumapädagogik</p>
                 <p>Email: lil.schulthess@bluewin.ch</p>
             </div>
         </div>
     </header>
-    <main>
-        <div class="buttons">
-            <button onclick="toggleFileLinks('experteninterviewsLinks')">Experteninterviews</button>
-            <button onclick="toggleFileLinks('theoretischeVertiefungLinks')">Theoretische Vertiefung</button>
-            <button onclick="toggleFileLinks('schlussfolgerungenLinks')">Schlussfolgerungen</button>
-        </div>
-        <div class="file-links" id="experteninterviewsLinks">
-            <a href="Vertiefender Einblick Handreichung/Experteninterviews/Experteninterview mit Daniel Mauerhofer.pdf" target="_blank">Experteninterview mit Daniel Mauerhofer</a>
-            <a href="Vertiefender Einblick Handreichung/Experteninterviews/Experteninterview mit Schulpsychologin.pdf" target="_blank">Experteninterview mit Schulpsychologin</a>
-            <a href="Vertiefender Einblick Handreichung/Experteninterviews/Experteninterview mit Marianne Herzog.pdf" target="_blank">Experteninterview mit Marianne Herzog</a>
-        </div>
-        <div class="file-links" id="theoretischeVertiefungLinks">
-            <a href="Vertiefender Einblick Handreichung/Theoretische Vertiefung/Bindungstheorie.pdf" target="_blank">Bindungstheorie.pdf</a>
-            <a href="Vertiefender Einblick Handreichung/Theoretische Vertiefung/Trauma.pdf" target="_blank">Trauma</a>
-            <a href="Vertiefender Einblick Handreichung/Theoretische Vertiefung/Traumapädagogik.pdf" target="_blank">Traumapädagogik</a>
-        </div>
-        <div class="file-links" id="schlussfolgerungenLinks">
-            <a href="Vertiefender Einblick Handreichung/Darstellung der Ergebnisse.pdf" target="_blank">Darstellung der Ergebnisse</a>
-            <a href="Vertiefender Einblick Handreichung/Diskussion.pdf" target="_blank">Diskussion</a>
-            <a href="Vertiefender Einblick Handreichung/Fazit.pdf" target="_blank">Fazit</a>
-        </div>
-    </main>
+    <div class="buttons">
+        <button onclick="toggleFileLinks('experteninterviewsLinks')">Experteninterviews</button>
+        <button onclick="toggleFileLinks('theoretischeVertiefungLinks')">Theoretische Vertiefung</button>
+        <button onclick="toggleFileLinks('schlussfolgerungenLinks')">Schlussfolgerungen</button>
+    </div>
+    <div class="file-links" id="experteninterviewsLinks">
+        <a href="Vertiefender Einblick Handreichung/Experteninterviews/Experteninterview mit Daniel Mauerhofer.pdf" target="_blank">Experteninterview mit Daniel Mauerhofer</a>
+        <a href="Vertiefender Einblick Handreichung/Experteninterviews/Experteninterview mit Schulpsychologin.pdf" target="_blank">Experteninterview mit Schulpsychologin</a>
+        <a href="Vertiefender Einblick Handreichung/Experteninterviews/Experteninterview mit Marianne Herzog.pdf" target="_blank">Experteninterview mit Marianne Herzog</a>
+    </div>
+    <div class="file-links" id="theoretischeVertiefungLinks">
+        <a href="Vertiefender Einblick Handreichung/Theoretische Vertiefung/Bindungstheorie.pdf" target="_blank">Bindungstheorie</a>
+        <a href="Vertiefender Einblick Handreichung/Theoretische Vertiefung/Trauma.pdf" target="_blank">Trauma</a>
+        <a href="Vertiefender Einblick Handreichung/Theoretische Vertiefung/Traumapädagogik.pdf" target="_blank">Traumapädagogik</a>
+    </div>
+    <div class="file-links" id="schlussfolgerungenLinks">
+        <a href="Vertiefender Einblick Handreichung/Darstellung der Ergebnisse.pdf" target="_blank">Darstellung der Ergebnisse</a>
+        <a href="Vertiefender Einblick Handreichung/Diskussion.pdf" target="_blank">Diskussion</a>
+        <a href="Vertiefender Einblick Handreichung/Fazit.pdf" target="_blank">Fazit</a>
+    </div>
     <footer>
         <p>&copy; 2024 Liliane Schulthess</p>
     </footer>
     <script>
         function toggleProfileInfo() {
             var profileInfo = document.getElementById('profileInfo');
-            if (profileInfo.style.display === 'none' || profileInfo.style.display === '') {
-                profileInfo.style.display = 'block';
-            } else {
-                profileInfo.style.display = 'none';
-            }
+            profileInfo.style.display = profileInfo.style.display === 'block' ? 'none' : 'block';
         }
 
         function toggleFileLinks(id) {
@@ -171,11 +160,7 @@
                 fileLinks[i].style.display = 'none';
             }
             var target = document.getElementById(id);
-            if (target.style.display === 'none' || target.style.display === '') {
-                target.style.display = 'flex';
-            } else {
-                target.style.display = 'none';
-            }
+            target.style.display = target.style.display === 'flex' ? 'none' : 'flex';
         }
     </script>
 </body>

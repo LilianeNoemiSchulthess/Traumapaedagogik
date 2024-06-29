@@ -8,10 +8,12 @@
         :root {
             --theme-palette-color-2: #27867b;
             --theme-palette-color-8: #ffffff;
+            --header-footer-color: #0000ff;
+            --background-color: #ccffcc;
         }
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background-color: var(--background-color);
             margin: 0;
             padding: 0;
             display: flex;
@@ -20,7 +22,7 @@
             min-height: 100vh;
         }
         header {
-            background-color: #000;
+            background-color: var(--header-footer-color);
             color: white;
             display: flex;
             justify-content: space-between;
@@ -98,7 +100,7 @@
             color: white;
         }
         footer {
-            background-color: #000;
+            background-color: var(--header-footer-color);
             color: white;
             text-align: center;
             padding: 10px 0;

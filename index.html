@@ -6,11 +6,11 @@
     <title>Liliane Schulthess</title>
     <style>
         :root {
-            --theme-palette-color-1: #4a4a4a; /* Dunkelgrau */
-            --theme-palette-color-2: #f7f7f7; /* Hellgrau */
+            --theme-palette-color-1: #d6c6b4; /* Hellbeige */
+            --theme-palette-color-2: #f5f0e6; /* Sehr helles Beige */
             --theme-palette-color-3: #ffffff; /* Weiß */
-            --theme-palette-color-4: #007acc; /* Blau */
-            --theme-palette-color-5: #005b99; /* Dunkelblau */
+            --theme-palette-color-4: #333333; /* Dunkelgrau */
+            --theme-palette-color-5: #a58f76; /* Mittelbeige */
         }
         body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -23,15 +23,21 @@
         }
         header {
             background-color: var(--theme-palette-color-1);
-            color: var(--theme-palette-color-3);
+            color: var(--theme-palette-color-4);
             display: flex;
-            justify-content: space-between;
             align-items: center;
             padding: 20px;
         }
         header h1 {
-            margin: 0;
+            margin: 10px 0 0 0;
             font-size: 24px;
+            text-align: center;
+        }
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-right: 20px;
         }
         .profile {
             position: relative;
@@ -47,13 +53,14 @@
         .profile-info {
             display: none;
             background-color: var(--theme-palette-color-3);
-            color: var(--theme-palette-color-1);
+            color: var(--theme-palette-color-4);
             padding: 15px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             position: absolute;
-            right: 0;
-            top: 90px;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 100px;
             width: 250px;
             z-index: 1;
         }
@@ -68,7 +75,7 @@
             flex-wrap: wrap;
         }
         .buttons button {
-            background-color: var(--theme-palette-color-4);
+            background-color: var(--theme-palette-color-5);
             color: var(--theme-palette-color-3);
             width: 220px;
             height: 220px;
@@ -85,8 +92,8 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .buttons button:hover {
-            background-color: var(--theme-palette-color-5);
-            color: var(--theme-palette-color-3);
+            background-color: var(--theme-palette-color-3);
+            color: var(--theme-palette-color-5);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
         .file-links {
@@ -103,19 +110,19 @@
             padding: 12px 20px;
             border-radius: 5px;
             text-decoration: none;
-            border: 1px solid var(--theme-palette-color-4);
+            border: 1px solid var(--theme-palette-color-5);
             width: 90%;
             max-width: 500px;
             text-align: center;
             transition: background-color 0.3s, color 0.3s;
         }
         .file-links a:hover {
-            background-color: var(--theme-palette-color-4);
+            background-color: var(--theme-palette-color-5);
             color: var(--theme-palette-color-3);
         }
         footer {
             background-color: var(--theme-palette-color-1);
-            color: var(--theme-palette-color-3);
+            color: var(--theme-palette-color-4);
             text-align: center;
             padding: 10px 0;
             margin-top: auto;
@@ -124,13 +131,15 @@
 </head>
 <body>
     <header>
-        <h1>Liliane Schulthess</h1>
-        <div class="profile" onclick="toggleProfileInfo()">
-            <img src="Perfil.jpeg" alt="Liliane Schulthess">
-            <div class="profile-info" id="profileInfo">
-                <p>Expertin für Traumapädagogik</p>
-                <p>Email: lil.schulthess@bluewin.ch</p>
+        <div class="profile-container">
+            <div class="profile" onclick="toggleProfileInfo()">
+                <img src="Perfil.jpeg" alt="Liliane Schulthess">
             </div>
+            <h1>Liliane Schulthess</h1>
+        </div>
+        <div class="profile-info" id="profileInfo">
+            <p>Expertin für Traumapädagogik</p>
+            <p>Email: lil.schulthess@bluewin.ch</p>
         </div>
     </header>
     <div class="buttons">

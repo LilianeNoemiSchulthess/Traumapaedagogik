@@ -46,27 +46,33 @@
             cursor: pointer;
         }
         .profile img {
-            height: 60px;
-            width: 60px;
+            height: 100px;
+            width: 100px;
             border-radius: 50%;
             object-fit: cover;
-            border: 2px solid var(--theme-palette-color-4);
+            border: 3px solid var(--theme-palette-color-4);
         }
         .profile-info {
             display: none;
             background-color: var(--theme-palette-color-3);
             color: var(--theme-palette-color-5);
-            padding: 10px;
+            padding: 15px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             position: absolute;
             top: 0;
-            left: 80px;
-            width: 220px;
+            left: 110px;
+            width: 250px;
             z-index: 1;
         }
         .profile-info p {
-            margin: 5px 0;
+            margin: 0 0 10px;
+        }
+        .buttons-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
         }
         .buttons {
             display: flex;
@@ -144,10 +150,12 @@
             <p>Email: lil.schulthess@bluewin.ch</p>
         </div>
     </header>
-    <div class="buttons">
-        <button onclick="toggleFileLinks('experteninterviewsLinks')">Experteninterviews</button>
-        <button onclick="toggleFileLinks('theoretischeVertiefungLinks')">Theoretische Vertiefung</button>
-        <button onclick="toggleFileLinks('schlussfolgerungenLinks')">Schlussfolgerungen</button>
+    <div class="buttons-container">
+        <div class="buttons">
+            <button onclick="toggleFileLinks('experteninterviewsLinks')">Experteninterviews</button>
+            <button onclick="toggleFileLinks('theoretischeVertiefungLinks')">Theoretische Vertiefung</button>
+            <button onclick="toggleFileLinks('schlussfolgerungenLinks')">Schlussfolgerungen</button>
+        </div>
     </div>
     <div class="file-links" id="experteninterviewsLinks">
         <a href="Vertiefender Einblick Handreichung/Experteninterviews/Experteninterview mit Daniel Mauerhofer.pdf" target="_blank">Experteninterview mit Daniel Mauerhofer</a>
@@ -165,22 +173,4 @@
         <a href="Vertiefender Einblick Handreichung/Fazit.pdf" target="_blank">Fazit</a>
     </div>
     <footer>
-        <p>&copy; 2024 Liliane Schulthess</p>
-    </footer>
-    <script>
-        function toggleProfileInfo() {
-            var profileInfo = document.getElementById('profileInfo');
-            profileInfo.style.display = profileInfo.style.display === 'block' ? 'none' : 'block';
-        }
-
-        function toggleFileLinks(id) {
-            var fileLinks = document.getElementsByClassName('file-links');
-            for (var i = 0; i < fileLinks.length; i++) {
-                fileLinks[i].style.display = 'none';
-            }
-            var target = document.getElementById(id);
-            target.style.display = target.style.display === 'flex' ? 'none' : 'flex';
-        }
-    </script>
-</body>
-</html>
+        <p>&copy; 2024 Lili

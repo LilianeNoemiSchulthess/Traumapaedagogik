@@ -22,6 +22,7 @@
             flex-direction: column;
             min-height: 100vh;
             color: var(--theme-palette-color-5);
+            align-items: center;
         }
         header {
             background-color: var(--theme-palette-color-1);
@@ -29,9 +30,12 @@
             display: flex;
             align-items: center;
             padding: 10px 20px;
+            width: 100%;
+            justify-content: center;
+            gap: 20px;
         }
         header h1 {
-            margin: 10px 0 0 0;
+            margin: 0;
             font-size: 20px;
             text-align: center;
         }
@@ -39,7 +43,6 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-right: 20px;
         }
         .profile {
             position: relative;
@@ -60,8 +63,9 @@
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             position: absolute;
-            top: 0;
-            left: 110px;
+            top: 120px;
+            left: 50%;
+            transform: translateX(-50%);
             width: 250px;
             z-index: 1;
         }
@@ -73,27 +77,29 @@
             justify-content: center;
             align-items: center;
             flex-grow: 1;
+            width: 100%;
+            margin-top: 20px;
+            flex-direction: column;
         }
         .buttons {
             display: flex;
             justify-content: center;
-            gap: 30px;
+            gap: 20px;
             padding: 20px;
             flex-wrap: wrap;
-            margin-top: 50px;
         }
         .buttons button {
             background-color: var(--theme-palette-color-2);
             color: var(--theme-palette-color-5);
-            width: 180px;
-            height: 180px;
+            width: 150px;
+            height: 150px;
             border: none;
             border-radius: 15px;
             text-align: center;
             font-weight: 500;
             transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 14px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -109,13 +115,13 @@
             flex-direction: column;
             align-items: center;
             gap: 10px;
-            margin-top: 20px;
+            margin-top: 10px;
             width: 100%;
         }
         .file-links a {
             background-color: var(--theme-palette-color-3);
             color: var(--theme-palette-color-5);
-            padding: 12px 20px;
+            padding: 10px 15px;
             border-radius: 5px;
             text-decoration: none;
             border: 1px solid var(--theme-palette-color-2);
@@ -133,7 +139,7 @@
             color: var(--theme-palette-color-4);
             text-align: center;
             padding: 10px 0;
-            margin-top: auto;
+            width: 100%;
         }
     </style>
 </head>
@@ -143,12 +149,12 @@
             <div class="profile" onclick="toggleProfileInfo()">
                 <img src="Perfil.jpeg" alt="Liliane Schulthess">
             </div>
-            <h1>Liliane Schulthess</h1>
+            <div class="profile-info" id="profileInfo">
+                <p>Expertin für Traumapädagogik</p>
+                <p>Email: lil.schulthess@bluewin.ch</p>
+            </div>
         </div>
-        <div class="profile-info" id="profileInfo">
-            <p>Expertin für Traumapädagogik</p>
-            <p>Email: lil.schulthess@bluewin.ch</p>
-        </div>
+        <h1>Liliane Schulthess</h1>
     </header>
     <div class="buttons-container">
         <div class="buttons">
@@ -156,21 +162,39 @@
             <button onclick="toggleFileLinks('theoretischeVertiefungLinks')">Theoretische Vertiefung</button>
             <button onclick="toggleFileLinks('schlussfolgerungenLinks')">Schlussfolgerungen</button>
         </div>
-    </div>
-    <div class="file-links" id="experteninterviewsLinks">
-        <a href="Vertiefender Einblick Handreichung/Experteninterviews/Experteninterview mit Daniel Mauerhofer.pdf" target="_blank">Experteninterview mit Daniel Mauerhofer</a>
-        <a href="Vertiefender Einblick Handreichung/Experteninterviews/Experteninterview mit Schulpsychologin.pdf" target="_blank">Experteninterview mit Schulpsychologin</a>
-        <a href="Vertiefender Einblick Handreichung/Experteninterviews/Experteninterview mit Marianne Herzog.pdf" target="_blank">Experteninterview mit Marianne Herzog</a>
-    </div>
-    <div class="file-links" id="theoretischeVertiefungLinks">
-        <a href="Vertiefender Einblick Handreichung/Theoretische Vertiefung/Bindungstheorie.pdf" target="_blank">Bindungstheorie</a>
-        <a href="Vertiefender Einblick Handreichung/Theoretische Vertiefung/Trauma.pdf" target="_blank">Trauma</a>
-        <a href="Vertiefender Einblick Handreichung/Theoretische Vertiefung/Traumapädagogik.pdf" target="_blank">Traumapädagogik</a>
-    </div>
-    <div class="file-links" id="schlussfolgerungenLinks">
-        <a href="Vertiefender Einblick Handreichung/Darstellung der Ergebnisse.pdf" target="_blank">Darstellung der Ergebnisse</a>
-        <a href="Vertiefender Einblick Handreichung/Diskussion.pdf" target="_blank">Diskussion</a>
-        <a href="Vertiefender Einblick Handreichung/Fazit.pdf" target="_blank">Fazit</a>
+        <div class="file-links" id="experteninterviewsLinks">
+            <a href="Vertiefender Einblick Handreichung/Experteninterviews/Experteninterview mit Daniel Mauerhofer.pdf" target="_blank">Experteninterview mit Daniel Mauerhofer</a>
+            <a href="Vertiefender Einblick Handreichung/Experteninterviews/Experteninterview mit Schulpsychologin.pdf" target="_blank">Experteninterview mit Schulpsychologin</a>
+            <a href="Vertiefender Einblick Handreichung/Experteninterviews/Experteninterview mit Marianne Herzog.pdf" target="_blank">Experteninterview mit Marianne Herzog</a>
+        </div>
+        <div class="file-links" id="theoretischeVertiefungLinks">
+            <a href="Vertiefender Einblick Handreichung/Theoretische Vertiefung/Bindungstheorie.pdf" target="_blank">Bindungstheorie</a>
+            <a href="Vertiefender Einblick Handreichung/Theoretische Vertiefung/Trauma.pdf" target="_blank">Trauma</a>
+            <a href="Vertiefender Einblick Handreichung/Theoretische Vertiefung/Traumapädagogik.pdf" target="_blank">Traumapädagogik</a>
+        </div>
+        <div class="file-links" id="schlussfolgerungenLinks">
+            <a href="Vertiefender Einblick Handreichung/Darstellung der Ergebnisse.pdf" target="_blank">Darstellung der Ergebnisse</a>
+            <a href="Vertiefender Einblick Handreichung/Diskussion.pdf" target="_blank">Diskussion</a>
+            <a href="Vertiefender Einblick Handreichung/Fazit.pdf" target="_blank">Fazit</a>
+        </div>
     </div>
     <footer>
-        <p>&copy; 2024 Lili
+        <p>&copy; 2024 Liliane Schulthess</p>
+    </footer>
+    <script>
+        function toggleProfileInfo() {
+            var profileInfo = document.getElementById('profileInfo');
+            profileInfo.style.display = profileInfo.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function toggleFileLinks(id) {
+            var fileLinks = document.getElementsByClassName('file-links');
+            for (var i = 0; i < fileLinks.length; i++) {
+                fileLinks[i].style.display = 'none';
+            }
+            var target = document.getElementById(id);
+            target.style.display = target.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
+</body>
+</html>

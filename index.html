@@ -6,14 +6,14 @@
     <title>Liliane Schulthess</title>
     <style>
         :root {
-            --theme-palette-color-1: #d6c6b4; /* Bege claro */
-            --theme-palette-color-2: #f5f0e6; /* Bege mais claro */
-            --theme-palette-color-3: #ffffff; /* Branco */
-            --theme-palette-color-4: #333333; /* Preto suave */
-            --theme-palette-color-5: #555555; /* Cinza escuro */
+            --theme-palette-color-1: #6a8eae; /* Blau */
+            --theme-palette-color-2: #f0f4f8; /* Hellgrau */
+            --theme-palette-color-3: #ffffff; /* Weiß */
+            --theme-palette-color-4: #333333; /* Dunkelgrau */
+            --theme-palette-color-5: #8e6aae; /* Lila */
         }
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
             background-color: var(--theme-palette-color-2);
             margin: 0;
             padding: 0;
@@ -23,7 +23,7 @@
         }
         header {
             background-color: var(--theme-palette-color-1);
-            color: var(--theme-palette-color-4);
+            color: var(--theme-palette-color-3);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -53,20 +53,24 @@
             position: absolute;
             right: 0;
             top: 60px;
-            width: 200px;
+            width: 220px;
             z-index: 1;
+        }
+        .profile-info p {
+            margin: 0 0 10px;
         }
         .buttons {
             display: flex;
             justify-content: center;
             gap: 20px;
             padding: 20px;
+            flex-wrap: wrap;
         }
         .buttons button {
-            background-color: var(--theme-palette-color-1);
-            color: var(--theme-palette-color-4);
-            width: 200px;
-            height: 200px;
+            background-color: var(--theme-palette-color-5);
+            color: var(--theme-palette-color-3);
+            width: 220px;
+            height: 220px;
             border: none;
             border-radius: 15px;
             text-align: center;
@@ -81,7 +85,7 @@
         }
         .buttons button:hover {
             background-color: var(--theme-palette-color-3);
-            color: var(--theme-palette-color-1);
+            color: var(--theme-palette-color-5);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
         .file-links {
@@ -97,17 +101,17 @@
             padding: 10px;
             border-radius: 5px;
             text-decoration: none;
-            border: 1px solid var(--theme-palette-color-1);
+            border: 1px solid var(--theme-palette-color-5);
             width: 100%;
             text-align: center;
             transition: background-color 0.3s, color 0.3s;
         }
         .file-links a:hover {
-            background-color: var(--theme-palette-color-1);
+            background-color: var(--theme-palette-color-5);
             color: var(--theme-palette-color-3);
         }
         footer {
-            background-color: var(--theme-palette-color-5);
+            background-color: var(--theme-palette-color-4);
             color: var(--theme-palette-color-3);
             text-align: center;
             padding: 10px 0;
@@ -121,7 +125,7 @@
         <div class="profile" onclick="toggleProfileInfo()">
             <img src="Perfil.jpeg" alt="Liliane Schulthess">
             <div class="profile-info" id="profileInfo">
-                <p>Expertin für Traumapädagogik</p>
+                <p>Schulische Heilpaedagogin</p>
                 <p>Email: lil.schulthess@bluewin.ch</p>
             </div>
         </div>
@@ -137,7 +141,7 @@
         <a href="Vertiefender Einblick Handreichung/Experteninterviews/Experteninterview mit Marianne Herzog.pdf" target="_blank">Experteninterview mit Marianne Herzog</a>
     </div>
     <div class="file-links" id="theoretischeVertiefungLinks">
-        <a href="Vertiefender Einblick Handreichung/Theoretische Vertiefung/Bindungstheorie.pdf" target="_blank">Bindungstheorie</a>
+        <a href="Vertiefender Einblick Handreichung/Theoretische Vertiefung/Bindungstheorie" target="_blank">Bindungstheorie</a>
         <a href="Vertiefender Einblick Handreichung/Theoretische Vertiefung/Trauma.pdf" target="_blank">Trauma</a>
         <a href="Vertiefender Einblick Handreichung/Theoretische Vertiefung/Traumapädagogik.pdf" target="_blank">Traumapädagogik</a>
     </div>
@@ -147,7 +151,7 @@
         <a href="Vertiefender Einblick Handreichung/Fazit.pdf" target="_blank">Fazit</a>
     </div>
     <footer>
-        <p>&copy; 2024 Liliane Schulthess</p>
+        <p>2024 Liliane Schulthess</p>
     </footer>
     <script>
         function toggleProfileInfo() {

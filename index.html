@@ -45,9 +45,9 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            position: relative;
         }
         .profile {
-            position: relative;
             cursor: pointer;
             transition: transform 0.3s, box-shadow 0.3s;
         }
@@ -71,10 +71,12 @@
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             position: absolute;
-            top: -10px;
-            left: 110px;
+            top: 110px;
             width: 250px;
             z-index: 1;
+        }
+        .profile-container:hover .profile-info {
+            display: block;
         }
         .profile-info p {
             margin: 0 0 10px;
@@ -154,7 +156,7 @@
 <body>
     <header>
         <div class="profile-container">
-            <div class="profile" onclick="toggleProfileInfo()">
+            <div class="profile">
                 <img src="Perfil.jpeg" alt="Liliane Schulthess">
             </div>
             <div class="profile-info" id="profileInfo">
@@ -193,11 +195,6 @@
         <p>&copy; 2024 </p>
     </footer>
     <script>
-        function toggleProfileInfo() {
-            var profileInfo = document.getElementById('profileInfo');
-            profileInfo.style.display = profileInfo.style.display === 'block' ? 'none' : 'block';
-        }
-
         function toggleFileLinks(id) {
             var fileLinks = document.getElementsByClassName('file-links');
             for (var i = 0; i < fileLinks.length; i++) {

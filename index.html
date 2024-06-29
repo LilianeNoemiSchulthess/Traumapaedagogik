@@ -151,11 +151,16 @@
             padding: 10px 0;
             width: 100%;
         }
+        @media (hover: none) {
+            .profile-container:hover .profile-info {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <div class="profile-container">
+        <div class="profile-container" onclick="toggleProfileInfo()">
             <div class="profile">
                 <img src="Perfil.jpeg" alt="Liliane Schulthess">
             </div>
@@ -195,6 +200,13 @@
         <p>&copy; 2024 </p>
     </footer>
     <script>
+        function toggleProfileInfo() {
+            if (window.matchMedia("(hover: none)").matches) {
+                var profileInfo = document.getElementById('profileInfo');
+                profileInfo.style.display = profileInfo.style.display === 'block' ? 'none' : 'block';
+            }
+        }
+
         function toggleFileLinks(id) {
             var fileLinks = document.getElementsByClassName('file-links');
             for (var i = 0; i < fileLinks.length; i++) {
